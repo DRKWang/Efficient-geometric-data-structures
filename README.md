@@ -1,6 +1,9 @@
 # Efficient geometric data structures for storing and querying piecewise linear functions Project
 The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki/R-tree) data structure.
 
+<img src="https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/e269d580-8005-11ea-9c78-d4ddd0366ca6.png" width="500" height="300" />
+
+
 #### Table of Contents
 
 - [Package cgal-swig-bindings, script packages cgal, swig](#package-cgal-swig-bindings-script-packages-cgal-swig)
