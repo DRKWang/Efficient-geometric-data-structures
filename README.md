@@ -26,5 +26,5 @@ A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_
 - [A quick way for computing the Minkowski sums](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Computation%20of%20Minkowski%20sums%20-%20Jupyter%20Notebook.pdf)
 - [How to stop Sage from overriding Python number types](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/How%20to%20stop%20Sage%20from%20overriding%20Python%20number%20types.md)
 - [how to test libspatialindex](https://github.com/libspatialindex/libspatialindex/issues/218)
-- [Geometry library](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/log1.md)
+- [Geometry library](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/logfiles/log1.md)
 
