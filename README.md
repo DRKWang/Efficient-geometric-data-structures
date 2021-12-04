@@ -29,11 +29,13 @@ A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_
 
 #### Table of Contents
 
-- [Package cgal-swig-bindings, script packages cgal, swig](#package-cgal-swig-bindings-script-packages-cgal-swig)
-- [Package libspatialindex, rtree](#package-libspatialindex-rtree)
-- [RealSet Class](#realSet-class)
-- [RationalPolyhedralFan Class](#rationalpolyhedralfan-class)
-- [Cut-generating functions](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Cut-generating-functions.ipynb)
+- [What is rtree?](#What-is-rtree?)
+- [What are the ordinary operations for rtree data structure?](#package-libspatialindex-rtree)
+- [Is there any variants of rtree? What are they?](#realSet-class)
+- [What is the main difference of those variants?](#rationalpolyhedralfan-class)
+- [What problems can rtree be used to solve in this project?](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Cut-generating-functions.ipynb)
+- [What are the main work for this project?]
+- [How to access to those work?]
 
 ## What is rtree?
 
