@@ -34,10 +34,13 @@ rtree is a tree data structure used for queries and storage of multi-dimensional
 
 ## What are the ordinary operations for rtree data structure? 
 See the [link](https://en.wikipedia.org/wiki/R-tree#Algorithm).
+A prototypal list of the operations with inputs and outputs can be found [here](https://aabbtree.readthedocs.io/en/latest/).
 
-## Is there any variants of rtree? What are they?
+## Is there any variants of rtree? What are they? 
 Yes. The variants of it inlcude [PR-tree](https://en.wikipedia.org/wiki/Priority_R-tree), [R*-trees](https://en.wikipedia.org/wiki/R*-tree), [R+ tree](https://en.wikipedia.org/wiki/R%2B_tree), [Hilbert R-tree](https://en.wikipedia.org/wiki/Hilbert_R-tree), [X-tree](https://en.wikipedia.org/wiki/X-tree).
 
+## What is the main difference of the variants?
+Coverage is the entire area to cover all related rectangles. Overlap is the entire area which is contained in two or more nodes.
 
 ## What problems can rtree be used to solve in this project?
 Regualarly, rtree, or AABB tree, can be used for 
