@@ -29,13 +29,13 @@ A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_
 
 #### Table of Contents
 
-- [What is rtree?](#What-is-rtree?)
-- [What are the ordinary operations for rtree data structure?](#package-libspatialindex-rtree)
-- [Is there any variants of rtree? What are they?](#realSet-class)
-- [What is the main difference of those variants?](#rationalpolyhedralfan-class)
-- [What problems can rtree be used to solve in this project?](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Cut-generating-functions.ipynb)
-- [What are the main work for this project?]
-- [How to access to those work?]
+- [What is rtree?](#what-is-rtree)
+- [What are the ordinary operations for rtree data structure?](#what-are-the-ordinary-operations-for-rtree-data-structure)
+- [Is there any variants of rtree? What are they?](#is-there-any-variants-of-rtree-what-are-they)
+- [What is the main difference of those variants?](#what-is-the-main-difference-of-those-variants)
+- [What problems can rtree be used to solve in this project?](#what-problems-can-rtree-be-used-to-solve-in-this-project)
+- [What are the main work for this project?](#what-are-the-main-work-for-this-project)
+- [How to access to those work?](#how-to-access-to-those-work)
 
 ## What is rtree?
 
