@@ -74,9 +74,9 @@ We have implemented rtree data structure for RealSet class, (It can be seen as a
 
 ## What are the contributions of this project?
 Methods:
-- Designed a method for automatically determining whether a Polyhedral fan is pointed or not, see comments[50-53](https://trac.sagemath.org/ticket/32170#comment:50).
-- Designed a method for quickly computing Minkowski sums of a group of convex polytopes, see this [page](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Computation%20of%20Minkowski%20sums%20-%20Jupyter%20Notebook.pdf).
-- Designed a method for quickly detecting the intersection of polytope pairs, see this [page](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/part2%20and%20part3%20-%20Jupyter%20Notebook.pdf).
+- Method for automatically determining whether a Polyhedral fan is pointed or not, see comments[50-53](https://trac.sagemath.org/ticket/32170#comment:50).
+- Method for quickly computing Minkowski sums of a group of convex polytopes, see this [page](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Computation%20of%20Minkowski%20sums%20-%20Jupyter%20Notebook.pdf).
+- Method for quickly detecting the intersection of polytope pairs, see this [page](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/part2%20and%20part3%20-%20Jupyter%20Notebook.pdf).
 
 Implementations:
 - Class [RealSet_rtree](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=dfc5410a11c9e32eabf13648f4bce7dd20552cb4)
