@@ -35,7 +35,7 @@ A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_
 - [RationalPolyhedralFan Class](#rationalpolyhedralfan-class)
 - [Cut-generating functions](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Cut-generating-functions.ipynb)
 
-### What is rtree?
+## What is rtree?
 
 Short answer:
 
@@ -47,12 +47,12 @@ A friendly introduction can be found [here](https://www.azurefromthetrenches.com
 See this [link](https://en.wikipedia.org/wiki/R-tree#Algorithm).
 Prototypal operations with inputs and outputs can be found [here](https://aabbtree.readthedocs.io/en/latest/).
 
-### Is there any variants of rtree? What are they? 
+## Is there any variants of rtree? What are they? 
 Yes. 
 
 The variants of it inlcude [PR-tree](https://en.wikipedia.org/wiki/Priority_R-tree), [R*-trees](https://en.wikipedia.org/wiki/R*-tree), [R+ tree](https://en.wikipedia.org/wiki/R%2B_tree), [Hilbert R-tree](https://en.wikipedia.org/wiki/Hilbert_R-tree), [X-tree](https://en.wikipedia.org/wiki/X-tree).
 
-### What is the main difference of those variants?
+## What is the main difference of those variants?
 There are two important concepts for rtree. 
 
 **Coverage** is the entire area to cover all related rectangles. 
@@ -63,12 +63,12 @@ Minimal coverage reduces the amount of "dead space" (empty area) which is covere
 
 The main *difference* of those variants lies on how they deal with the Coverage and Overlap. For example, R+ trees differ from R trees in that: nodes are not guaranteed to be at least half filled, the entries of any internal node do not overlap, and an object ID may be stored in more than one leaf node.
 
-### What problems can rtree be used to solve in this project?
+## What problems can rtree be used to solve in this project?
 In this project, we use the rtree to solve the problem of intersection detection of convex [polytopes](https://en.wikipedia.org/wiki/Polytope) in a high-dimensional space for mathematical research. Because most mathematicans in this area only focus on the pure theoritical research with less attention on how to organize them for computation, it is common to store convex polytopes in the element-to-set form without any interior relationship support. However, as the number of convex polytopes increases, the intersection dectection will be slow since it is a linear scanning due to element-to-set form. The advantage of rtree is that it can store those convex polytopes based on their geometrical neighbourhood in a tree organizing, which is a binary search for querying. 
 
 We have implemented rtree data structure for RealSet class, (It can be seen as a collection of one-dimensional convex polytopes), and for pointed RationalPolyhedronFan class, (Even though it is a collection of cones, we transformed cones to convex polytopes so that those cones still can be stored in a rtree) for obtaining high speed. The code of implementations can be found in those links class [RealSet_rtree](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=dfc5410a11c9e32eabf13648f4bce7dd20552cb4), and class [RationalPolyhedronFan_rtree](https://git.sagemath.org/sage.git/tree/src/sage/geometry/fan.py?id=ebe6d929ee4bf48834dc1ea51d7fe51b65469880). The details of it can found in this [page](https://trac.sagemath.org/ticket/32170).
 
-### What are polygons, polytopes, cones, and polyhedra? what is differences of them?
+## What are polygons, polytopes, cones, and polyhedra? what is differences of them?
 
 Short answers:
 
@@ -79,7 +79,7 @@ In elementary geometry, a polytope is a geometric object with "flat" sides. It i
 
 
 
-## Other references
+# Useful references
 
 - [A quick way for computing the Minkowski sums](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Computation%20of%20Minkowski%20sums%20-%20Jupyter%20Notebook.pdf)
 - [How to stop Sage from overriding Python number types](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/How%20to%20stop%20Sage%20from%20overriding%20Python%20number%20types.md)
