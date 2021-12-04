@@ -34,7 +34,7 @@ A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_
 - [Is there any variants of rtree? What are they?](#is-there-any-variants-of-rtree-what-are-they)
 - [What is the main difference of those variants?](#what-is-the-main-difference-of-those-variants)
 - [What problems can rtree be used to solve in this project?](#what-problems-can-rtree-be-used-to-solve-in-this-project)
-- [What are the main work for this project?](#what-are-the-main-work-for-this-project)
+- [What are the contributions of this project?](#what-are-the-main-work-for-this-project)
 - [How to access to those work?](#how-to-access-to-those-work)
 
 ## What is rtree?
@@ -72,7 +72,7 @@ In this project, we use the rtree to solve the problem of intersection detection
 
 We have implemented rtree data structure for RealSet class, (It can be seen as a collection of one-dimensional convex polytopes), and for pointed RationalPolyhedronFan class, (Even though it is a collection of cones, we transformed cones to convex polytopes so that those cones still can be stored in a rtree) for obtaining high speed. See codes of class [RealSet_rtree](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=dfc5410a11c9e32eabf13648f4bce7dd20552cb4), and class [RationalPolyhedralFan_rtree](https://git.sagemath.org/sage.git/tree/src/sage/geometry/fan.py?id=ebe6d929ee4bf48834dc1ea51d7fe51b65469880). The details of implementation can be found on this [page](https://trac.sagemath.org/ticket/32170).
 
-## What are the main work for this project?
+## What are the contributions of this project?
 Methods:
 - Designed a method for automatically determining whether a Polyhedral fan is pointed or not, see comments[50-53](https://trac.sagemath.org/ticket/32170#comment:50).
 - Designed a method for quickly computing Minkowski sums of a group of convex polytopes, see this [page](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Computation%20of%20Minkowski%20sums%20-%20Jupyter%20Notebook.pdf).
@@ -85,10 +85,6 @@ Implementations:
 Packaging:
 - [Package cgal-swig-bindings, script packages cgal, swig](https://trac.sagemath.org/ticket/31098)
 - [Package libspatialindex, rtree](https://trac.sagemath.org/ticket/32000)
-
-Testing:
-
-- See the ticket of each project.
 
 ## How to access to those work?
 You may access them via SageMath software. You can check the tutorial of SageMath from this [page](https://doc.sagemath.org/html/en/tutorial/).
