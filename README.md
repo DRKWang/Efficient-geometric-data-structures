@@ -41,11 +41,13 @@ Short answer:
 
 **rtree** is a tree data structure used for queries and storage of multi-dimensional data. The key idea of the data structure is to group local objects and represent them with their minimum bounding rectangle in the next higher level of the tree; the "r" in rtree is for rectangle. Another name for rtree is called AABB tree, Axis-Aligned Bounding Box Tree. Since all objects lie within this bounding rectangle, it is possible to make a fast query that does not intersect the bounding rectangle also cannot intersect any of the contained objects.
 
-A friendly introduction can be found [here](https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/). a little long slides but with clear details can be found [here](https://box2d.org/files/ErinCatto_DynamicBVH_GDC2019.pdf).
+A friendly introduction can be found [here](https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/). 
+
+A little long slides but with clear details can be found [here](https://box2d.org/files/ErinCatto_DynamicBVH_GDC2019.pdf).
 
 ## What are the ordinary operations for rtree data structure? 
 See this [link](https://en.wikipedia.org/wiki/R-tree#Algorithm).
-Prototypal operations with inputs and outputs can be found [here](https://aabbtree.readthedocs.io/en/latest/).
+A simple prototype with inputs and outputs can be found [here](https://aabbtree.readthedocs.io/en/latest/).
 
 ## Is there any variants of rtree? What are they? 
 Yes. 
@@ -66,20 +68,20 @@ The main *difference* of those variants lies on how they deal with the Coverage 
 ## What problems can rtree be used to solve in this project?
 In this project, we use the rtree to solve the problem of intersection detection of convex [polytopes](https://en.wikipedia.org/wiki/Polytope) in a high-dimensional space for mathematical research. Because most mathematicans in this area only focus on the pure theoritical research with less attention on how to organize them for computation, it is common to store convex polytopes in the element-to-set form without any interior relationship support. However, as the number of convex polytopes increases, the intersection dectection will be slow since it is a linear scanning due to element-to-set form. The advantage of rtree is that it can store those convex polytopes based on their geometrical neighbourhood in a tree organizing, which is a binary search for querying. 
 
-We have implemented rtree data structure for RealSet class, (It can be seen as a collection of one-dimensional convex polytopes), and for pointed RationalPolyhedronFan class, (Even though it is a collection of cones, we transformed cones to convex polytopes so that those cones still can be stored in a rtree) for obtaining high speed. The code of implementations can be found in those links class [RealSet_rtree](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=dfc5410a11c9e32eabf13648f4bce7dd20552cb4), and class [RationalPolyhedronFan_rtree](https://git.sagemath.org/sage.git/tree/src/sage/geometry/fan.py?id=ebe6d929ee4bf48834dc1ea51d7fe51b65469880). The details of it can found in this [page](https://trac.sagemath.org/ticket/32170).
-
-## What are polygons, polytopes, cones, and polyhedra? what is differences of them?
-
-Short answers:
-
-**
-In geometry, a polygon is a plane figure that is described by a finite number of straight line segments connected to form a closed set.
-**Polytopes**
-In elementary geometry, a polytope is a geometric object with "flat" sides. It is a generalization in any number of dimensions of the convex polygon in 2D.
+We have implemented rtree data structure for RealSet class, (It can be seen as a collection of one-dimensional convex polytopes), and for pointed RationalPolyhedronFan class, (Even though it is a collection of cones, we transformed cones to convex polytopes so that those cones still can be stored in a rtree) for obtaining high speed. See codes of class [RealSet_rtree](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=dfc5410a11c9e32eabf13648f4bce7dd20552cb4), and class [RationalPolyhedralFan_rtree](https://git.sagemath.org/sage.git/tree/src/sage/geometry/fan.py?id=ebe6d929ee4bf48834dc1ea51d7fe51b65469880). The details of impletation can found in this [page](https://trac.sagemath.org/ticket/32170).
 
 
+## What are the outcomes of this project?
+Methods:
+- Designed a method for automatically determining whether a Polyhedral fan is pointed or not, see comments[50-53](https://trac.sagemath.org/ticket/32170#comment:50).
+- Designed a method for quickly computing Minkowski sums of a group of convex polytopes, see this [page](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Computation%20of%20Minkowski%20sums%20-%20Jupyter%20Notebook.pdf)
+- Designed a method for quickly 
+- [Package cgal-swig-bindings, script packages cgal, swig](#package-cgal-swig-bindings-script-packages-cgal-swig)
 
-# Useful references
+
+
+
+# Other useful references
 
 - [A quick way for computing the Minkowski sums](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Computation%20of%20Minkowski%20sums%20-%20Jupyter%20Notebook.pdf)
 - [How to stop Sage from overriding Python number types](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/How%20to%20stop%20Sage%20from%20overriding%20Python%20number%20types.md)
