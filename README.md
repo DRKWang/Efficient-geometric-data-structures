@@ -12,6 +12,11 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 - [RationalPolyhedralFan Class](#rationalpolyhedralfan-class)
 - [Cut-generating functions](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Cut-generating-functions.ipynb)
 
+#### Q&A
+
+- [What is rtree?](#what-is-rtree)
+- [What problems can it be used to solve?]
+
 ## Package cgal-swig-bindings, script packages cgal, swig
 [CGAL](https://www.cgal.org/) is a software project that provides easy access to efficient and reliable geometric algorithms in the form of a C++ library. We integrated the package [cgal-swig-bindings](https://github.com/CGAL/cgal-swig-bindings) into the [SageMath](https://www.sagemath.org/) software for calling functions in CGAL. Code and discussion can be found in this [ticket](https://trac.sagemath.org/ticket/31098).
 
@@ -23,6 +28,21 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 
 ## RationalPolyhedralFan Class
 A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_geometry/sage/geometry/fan.html) is a *finite* collection of **strictly** convex rational polyhedral cones, such that the intersection of any two cones of the fan is a face of each of them and each face of each cone is also a cone of the fan. For the `Class RationalPolyhedralFan()` in SageMath, We added rtree data structure for reducing the time of `support_contains()` function, which is used for checking if a point is contained in the support of the fan. The idea is similar to the situation in RealSet class, that we will give a preliminary overestimation of the search result first, then we give a further verification. In addition, we also add LP-solver and faceted-based method for automatically determining if it is a pointed fan or not. Code and discussion can be found in this [ticket](https://trac.sagemath.org/ticket/32170#comment:50).
+
+## What is rtree?
+rtree is a tree data structure used for queries and storage of multi-dimensional data. The key idea of the data structure is to group local objects and represent them with their minimum bounding rectangle in the next higher level of the tree; the "R" in R-tree is for rectangle. Another name for rtree is called AABB tree, Axis-Aligned Bounding Box Tree. Since all objects lie within this bounding rectangle, it is possible to make a fast query that does not intersect the bounding rectangle also cannot intersect any of the contained objects. Here is a friendly [introduction](https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/).
+
+## What are the ordinary operations for rtree data structure? 
+See the [link](https://en.wikipedia.org/wiki/R-tree#Algorithm).
+
+## Is there any variants of rtree? What are they?
+Yes. The variants of it inlcude [PR-tree](https://en.wikipedia.org/wiki/Priority_R-tree), [R*-trees](https://en.wikipedia.org/wiki/R*-tree), [R+ tree](https://en.wikipedia.org/wiki/R%2B_tree), [Hilbert R-tree](https://en.wikipedia.org/wiki/Hilbert_R-tree), [X-tree](https://en.wikipedia.org/wiki/X-tree).
+
+
+## What problems can rtree be used to solve in this project?
+Regualarly, rtree, or AABB tree, can be used for 
+
+## 
 
 ## Others
 
