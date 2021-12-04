@@ -34,7 +34,7 @@ A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_
 - [Is there any variants of rtree? What are they?](#is-there-any-variants-of-rtree-what-are-they)
 - [What is the main difference of those variants?](#what-is-the-main-difference-of-those-variants)
 - [What problems can rtree be used to solve in this project?](#what-problems-can-rtree-be-used-to-solve-in-this-project)
-- [What are the contributions of this project?](#what-are-the-main-work-for-this-project)
+- [What are the contributions of this project?](#what-are-the-contributions-of-this-project)
 - [How to access to those work?](#how-to-access-to-those-work)
 
 ## What is rtree?
