@@ -55,15 +55,15 @@ Yep.
 The variants of it inlcude [PR-tree](https://en.wikipedia.org/wiki/Priority_R-tree), [R*-trees](https://en.wikipedia.org/wiki/R*-tree), [R+ tree](https://en.wikipedia.org/wiki/R%2B_tree), [Hilbert R-tree](https://en.wikipedia.org/wiki/Hilbert_R-tree), [X-tree](https://en.wikipedia.org/wiki/X-tree).
 
 ## What is the main difference of those variants?
-There are two important concepts for rtree. 
+There are two important concepts for rtree:
 
-**Coverage** is the entire area to cover all related rectangles. 
+**Coverage** is the entire area to cover all related rectangles.
 
-**Overlap** is the entire area which is contained in two or more nodes. 
+**Overlap** is the entire area that is contained in two or more nodes.
 
-Minimal coverage reduces the amount of "dead space" (empty area) which is covered by the nodes of the R-tree. Minimal overlap reduces the set of search paths to the leaves (even more critical for the access time than minimal coverage). Efficient search requires minimal coverage and overlap. 
+Minimal coverage reduces the amount of "dead space" (empty area) which is covered by the nodes of the R-tree. Minimal overlap reduces the set of search paths to the leaves (even more critical for the access time than minimal coverage). Efficient search requires minimal coverage and overlap.
 
-The main *difference* of those variants lies on how they deal with the Coverage and Overlap. For example, R+ trees differ from R trees in that: nodes are not guaranteed to be at least half filled, the entries of any internal node do not overlap, and an object ID may be stored in more than one leaf node.
+The main *difference* between those variants lies in how they deal with the Coverage and Overlap. For example, R+ trees differ from R trees in that: nodes are not guaranteed to be at least half-filled, the entries of any internal node do not overlap, and an object ID may be stored in more than one leaf node.
 
 ## What problems can rtree be used to solve in this project?
 In this project, we use the rtree to solve the problem of intersection detection of convex [polytopes](https://en.wikipedia.org/wiki/Polytope) in a high-dimensional space for mathematical research. Because most mathematicians in this area only focus on pure theoretical research with less attention on how to organize them for computation, it is common to store convex polytopes in the element-to-set form without any interior relationship support. However, as the number of convex polytopes increases, the intersection detection will be slow since it is a linear scanning due to the element-to-set form. The advantage of rtree is that it can store those convex polytopes based on their geometrical neighborhood in a tree organizing, which is a binary search for queries.
