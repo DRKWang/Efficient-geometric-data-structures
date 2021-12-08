@@ -3,8 +3,7 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 
 <img src="https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/e269d580-8005-11ea-9c78-d4ddd0366ca6.png" width="500" height="300" />
 
-
-#### Table of Contents
+#### **Projects**
 
 - [Package cgal-swig-bindings, script packages cgal, swig](#package-cgal-swig-bindings-script-packages-cgal-swig)
 - [Package libspatialindex, rtree](#package-libspatialindex-rtree)
@@ -12,6 +11,15 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 - [RationalPolyhedralFan Class](#rationalpolyhedralfan-class)
 - [Cut-generating functions](https://github.com/DRKWang/Efficient-geometric-data-structures/blob/main/Cut-generating-functions.ipynb)
 
+#### **Q&A**
+
+- [What is rtree?](#what-is-rtree)
+- [What are the ordinary operations for rtree data structure?](#what-are-the-ordinary-operations-for-rtree-data-structure)
+- [Is there any variants of rtree? What are they?](#is-there-any-variants-of-rtree-what-are-they)
+- [What is the main difference of those variants?](#what-is-the-main-difference-of-those-variants)
+- [What problems can rtree be used to solve in this project?](#what-problems-can-rtree-be-used-to-solve-in-this-project)
+- [What are the contributions of this project?](#what-are-the-contributions-of-this-project)
+- [How to access to those work?](#how-to-access-to-those-work)
 
 ## Package cgal-swig-bindings, script packages cgal, swig
 [CGAL](https://www.cgal.org/) is a software project that provides easy access to efficient and reliable geometric algorithms in the form of a C++ library. We integrated the package [cgal-swig-bindings](https://github.com/CGAL/cgal-swig-bindings) into the [SageMath](https://www.sagemath.org/) software for calling functions in CGAL. Code and discussion can be found in this [ticket](https://trac.sagemath.org/ticket/31098).
@@ -26,16 +34,6 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 A [rational polyhedral fan](https://doc.sagemath.org/html/en/reference/discrete_geometry/sage/geometry/fan.html) is a *finite* collection of **strictly** convex rational polyhedral cones, such that the intersection of any two cones of the fan is a face of each of them and each face of each cone is also a cone of the fan. For the `Class RationalPolyhedralFan()` in SageMath, We added rtree data structure for reducing the time of `support_contains()` function, which is used for checking if a point is contained in the support of the fan. The idea is similar to the situation in RealSet class, that we will give a preliminary overestimation of the search result first, then we give a further verification. In addition, we also add LP-solver and faceted-based method for automatically determining if it is a pointed fan or not. Code and discussion can be found in this [ticket](https://trac.sagemath.org/ticket/32170#comment:50).
 
 # Q&A
-
-#### Table of Contents
-
-- [What is rtree?](#what-is-rtree)
-- [What are the ordinary operations for rtree data structure?](#what-are-the-ordinary-operations-for-rtree-data-structure)
-- [Is there any variants of rtree? What are they?](#is-there-any-variants-of-rtree-what-are-they)
-- [What is the main difference of those variants?](#what-is-the-main-difference-of-those-variants)
-- [What problems can rtree be used to solve in this project?](#what-problems-can-rtree-be-used-to-solve-in-this-project)
-- [What are the contributions of this project?](#what-are-the-contributions-of-this-project)
-- [How to access to those work?](#how-to-access-to-those-work)
 
 ## What is rtree?
 
