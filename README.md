@@ -21,6 +21,8 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 - [What are the contributions of this project?](#what-are-the-contributions-of-this-project)
 - [How to access to those work?](#how-to-access-to-those-work)
 
+# Projects
+
 ## Package cgal-swig-bindings, script packages cgal, swig
 [CGAL](https://www.cgal.org/) is a software project that provides easy access to efficient and reliable geometric algorithms in the form of a C++ library. We integrated the package [cgal-swig-bindings](https://github.com/CGAL/cgal-swig-bindings) into the [SageMath](https://www.sagemath.org/) software for calling functions in CGAL. Code and discussion can be found in this [ticket](https://trac.sagemath.org/ticket/31098).
 
