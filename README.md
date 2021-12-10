@@ -107,37 +107,51 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 Run the following script in terminal:
 
-```$brew install cgal```
+```
+$brew install cgal
+```
 
 3. Install SWIG.
 
 Run the following script in terminal:
 
-```$brew install swig```
+```
+$brew install swig
+```
 
 4. Install cgal_swig_bindings.
 
 Enter into **SAGE_ROOT** in terminal:
 
-```$cd path/to/SAGE_ROOT```
+```
+$cd path/to/SAGE_ROOT
+```
 
 Pull the corresponding version from sage git, which includes the scripts for installing cgal_swig_bindings.
 
-```$git pull trac u/mkoeppe/cgal_swig_bindings```
+```
+$git pull trac u/mkoeppe/cgal_swig_bindings
+```
 
 Install it via sage:
 
-```$./sage -i cgal_swig_bindings```
+```
+$./sage -i cgal_swig_bindings
+```
 
 Now, we are done.
 
 To test whether it has been installed successfully, launch sage in terminal:
 
-```$./sage```
+```
+$./sage
+```
 
 Then import cgal in sage:
 
-```sage: import CGAL```
+```
+sage: import CGAL
+```
 
 If it can be imported without any error, then it shows installation is successful.
 
@@ -155,11 +169,15 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 Enter into **SAGE_ROOT** in terminal:
 
-```$cd path/to/SAGE_ROOT```
+```
+$cd path/to/SAGE_ROOT
+```
 
 Pull the corresponding version from sage git, which includes the scripts for installing libspatialindex and rtree:
 
-```$git pull trac public/32000```
+```
+$git pull trac public/32000
+```
 
 Install libspatialindex and rtree via sage:
 
@@ -172,11 +190,15 @@ Now, we are done.
 
 To test whether it has been installed successfully, launch sage in terminal:
 
-```$./sage```
+```
+$./sage
+```
 
 Then try to import rtree in sage:
 
-```sage: from rtree import index```
+```
+sage: from rtree import index
+```
 
 If it can be imported without any error, then it shows installation is successful.
 
@@ -194,7 +216,9 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 Pull the corresponding version from sage git:
 
-```$git pull trac public/32170```
+```
+$git pull trac public/32170
+```
 
 Install libspatialindex and rtree via sage:
 
@@ -205,17 +229,23 @@ $./sage -i rtree
 
 Recompile files in sage:
 
-```$./sage -b```
+```
+$./sage -b
+```
 
 Now, we are done.
 
 To test whether it has been installed successfully, launch sage in terminal:
 
-```$./sage```
+```
+$./sage
+```
 
 Then try to import it in sage:
 
-```sage: from sage.sets.real_set import RealSet_rtree```
+```
+sage: from sage.sets.real_set import RealSet_rtree
+```
 
 If it can be imported without any error, then installation is successful.
 
@@ -266,7 +296,9 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 Pull the corresponding version from sage git:
 
-```$git pull trac public/32170```
+```
+$git pull trac public/32170
+```
 
 Install libspatialindex and rtree via sage:
 
@@ -277,17 +309,23 @@ $./sage -i rtree
 
 Recompile files in sage:
 
-```$./sage -b```
+```
+$./sage -b
+```
 
 Now, we are done.
 
 To test whether it has been installed successfully, launch sage in terminal:
 
-```$./sage```
+```
+$./sage
+```
 
 Then try to import it in sage:
 
-```sage: from sage.geometry.fan import RationalPolyhedralFan_rtree```
+```
+sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
+```
 
 If it can be imported without any error, then installation is successful.
 
@@ -296,6 +334,7 @@ To use it, see the following examples.
 1. Define a `RationalPolyhedralFan_rtree` class:
 
 Explicitly define it with `RationalPolyhedralFan_rtree` class,
+
 ```
 sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
 sage: v1, v2= vector([0,1]), vector([1,0])
@@ -314,6 +353,7 @@ sage: f = Fan([cone1, cone2], allow_rtree = True)
 ```
 
 2. Check whether a fan is pointed or not.
+
 ```
 sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
 sage: v1, v2= vector([0,1]), vector([1,0])
