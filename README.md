@@ -258,7 +258,7 @@ sage: print(type(A.intersection(B)), type(B.intersection(A)))
 
 Other examples can be found in [docstring](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=a2fa0baaf7168d67a75f290640ad86cda2d75ad1) of `RealSet_rtree` class.
 
-## RationalPolyhedralFan Class
+## RationalPolyhedralFan_rtree Class
 
 To get access to `RationalPolyhedralFan_rtree` class in sage, please do as follows.
 
