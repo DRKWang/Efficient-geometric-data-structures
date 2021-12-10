@@ -195,7 +195,7 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 2. Install libspatialindex and rtree in sage.
 
-See [libspatialindex and rtree package](# libspatialindex-and-rtree-package).
+See [libspatialindex and rtree package](#libspatialindex-and-rtree-package).
 
 Now, we are done.
 
