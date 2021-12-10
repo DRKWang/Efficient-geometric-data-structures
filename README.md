@@ -21,6 +21,12 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 - [What are the contributions of this project?](#what-are-the-contributions-of-this-project)
 - [How to access to those work?](#how-to-access-to-those-work)
 
+#### **Installation & Usage**
+- [Installation of cgal_swig_bindings, cgal, swig]
+- [Installation and usage of libspatialindex and rtree]
+- [Usage of RealSet Class]
+- [Usage of RationalPolyhedralFan Class]
+
 # Projects
 
 ## Package cgal-swig-bindings, script packages cgal, swig
@@ -88,6 +94,30 @@ Packaging:
 
 ## How to access to those work?
 You may access them via SageMath software. You can check the tutorial of SageMath from this [page](https://doc.sagemath.org/html/en/tutorial/).
+
+# Installation & Usage
+
+The following code has been tested on MAC OS. It might be successful on other platforms, but without guarantee.
+
+## Installation of cgal_swig_bindings, cgal and swig package
+
+To get access to cgal in Sage, we do as follows.
+
+1. Install Sage.
+
+Since the `cgal_swig_bindings` package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
+
+2. Install CGAL
+
+Run `$brew install cgal` in terminal.
+8. 
+
+
+## Installation and usage of libspatialindex and rtree package
+
+## Usage of RealSet Class
+
+## Usage of RationalPolyhedralFan Class
 
 # Other useful references
 
