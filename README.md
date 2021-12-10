@@ -19,7 +19,6 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 - [What is the main difference of those variants?](#what-is-the-main-difference-of-those-variants)
 - [What problems can rtree be used to solve in this project?](#what-problems-can-rtree-be-used-to-solve-in-this-project)
 - [What are the contributions of this project?](#what-are-the-contributions-of-this-project)
-- [How to access to those work?](#how-to-access-to-those-work)
 
 #### **Installation & Usage**
 - [cgal_swig_bindings, cgal, swig](#cgal_swig_bindings-cgal-and-swig-package)
@@ -91,9 +90,6 @@ Implementations:
 Packaging:
 - [Package cgal-swig-bindings, script packages cgal, swig](https://trac.sagemath.org/ticket/31098)
 - [Package libspatialindex, rtree](https://trac.sagemath.org/ticket/32000)
-
-## How to access to those work?
-You may access them via SageMath software. You can check the tutorial of SageMath from this [page](https://doc.sagemath.org/html/en/tutorial/).
 
 # Installation & Usage
 
