@@ -185,7 +185,7 @@ If it can be imported without any error, then it shows installation is successfu
 
 To use it properly, please see these [examples](https://rtree.readthedocs.io/en/latest/tutorial.html).
 
-## Usage of RealSet_rtree Class
+## RealSet_rtree Class
 
 To get access to `RealSet_rtree` class in Sage, please do as follows.
 
@@ -217,11 +217,12 @@ To test whether it has been installed successfully, lauch sage in terminal:
 
 Then try to import cgal in sage:
 
-```sage: from rtree import index```
+```sage: from sage.sets.real_set import RealSet_rtree```
 
 If it can be imported without any error, then it shows installation is successful.
 
-To use it properly, please see these [examples](https://rtree.readthedocs.io/en/latest/tutorial.html).
+To use it, see the following examples.
+
 
 
 ## Usage of RationalPolyhedralFan Class
