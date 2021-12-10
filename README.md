@@ -147,7 +147,7 @@ If it can be imported without any error, then it shows installation is successfu
 
 To use it properly, please see these [examples](https://github.com/CGAL/cgal-swig-bindings/wiki/BindingsExamples).
 
-## Installation and usage of libspatialindex and rtree package
+## libspatialindex and rtree package
 
 To get access to cgal in Sage, please do as follows.
 
@@ -155,31 +155,20 @@ To get access to cgal in Sage, please do as follows.
 
 Since *cgal_swig_bindings* package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
 
-2. Install CGAL from homebrew.
-
-Run the following script in terminal:
-
-```$brew install cgal```
-
-3. Install SWIG from homebrew.
-
-Run the following script in terminal:
-
-```$brew install swig```
-
-4. Install cgal_swig_bindings in sage.
+2. Install libspatialindex and rtree in sage.
 
 Enter into **SAGE_ROOT** in terminal:
 
 ```$cd path/to/SAGE_ROOT```
 
-Pull the corresponding versions from sage git, which includes the scripts for installing cgal_swig_bindings:
+Pull the corresponding versions from sage git, which includes the scripts for installing libspatialindex and rtree:
 
-```$git pull trac u/mkoeppe/cgal_swig_bindings```
+```$git pull trac public/32000```
 
-Install it via Sage:
+Install them via Sage:
 
-```$./sage -i cgal_swig_bindings```
+```$./sage -i libspatialindex```
+```$./sage -i rtree```
 
 Now, we are done.
 
@@ -189,12 +178,11 @@ To test whether it has been installed successfully, lauch sage in terminal:
 
 Then try to import cgal in sage:
 
-```sage: import CGAL```
+```sage: from rtree import index```
 
 If it can be imported without any error, then it shows installation is successful.
 
-To use it properly, please see these [examples](https://github.com/CGAL/cgal-swig-bindings/wiki/BindingsExamples).
-
+To use it properly, please see these [examples](https://rtree.readthedocs.io/en/latest/tutorial.html).
 
 ## Usage of RealSet Class
 
