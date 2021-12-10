@@ -149,7 +149,7 @@ To use it properly, please see these [examples](https://github.com/CGAL/cgal-swi
 
 ## libspatialindex and rtree package
 
-To get access to cgal in Sage, please do as follows.
+To get access to rtree in Sage, please do as follows.
 
 1. Install Sage from source.
 
@@ -168,6 +168,7 @@ Pull the corresponding versions from sage git, which includes the scripts for in
 Install them via Sage:
 
 ```$./sage -i libspatialindex```
+
 ```$./sage -i rtree```
 
 Now, we are done.
@@ -184,7 +185,32 @@ If it can be imported without any error, then it shows installation is successfu
 
 To use it properly, please see these [examples](https://rtree.readthedocs.io/en/latest/tutorial.html).
 
-## Usage of RealSet Class
+## Usage of RealSet_rtree Class
+
+To get access to `RealSet_rtree` class in Sage, please do as follows.
+
+1. Install Sage from source.
+
+Since *cgal_swig_bindings* package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
+
+2. Install libspatialindex and rtree in sage.
+
+See [libspatialindex and rtree package](# libspatialindex-and-rtree-package).
+
+Now, we are done.
+
+To test whether it has been installed successfully, lauch sage in terminal:
+
+```$./sage```
+
+Then try to import cgal in sage:
+
+```sage: from rtree import index```
+
+If it can be imported without any error, then it shows installation is successful.
+
+To use it properly, please see these [examples](https://rtree.readthedocs.io/en/latest/tutorial.html).
+
 
 ## Usage of RationalPolyhedralFan Class
 
