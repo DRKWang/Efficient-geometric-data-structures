@@ -129,7 +129,7 @@ Pull the corresponding versions from sage git, which includes the scripts for in
 
 ```$git pull trac u/mkoeppe/cgal_swig_bindings```
 
-Install it via Sage.
+Install it via sage.
 
 ```$./sage -i cgal_swig_bindings```
 
@@ -151,7 +151,7 @@ To use it properly, please see these [examples](https://github.com/CGAL/cgal-swi
 
 To get access to rtree in Sage, please do as follows.
 
-1. Install Sage from source.
+1. Install sage from source.
 
 Since *cgal_swig_bindings* package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
 
@@ -165,7 +165,7 @@ Pull the corresponding versions from sage git, which includes the scripts for in
 
 ```$git pull trac public/32000```
 
-Install them via Sage:
+Install libspatialindex and rtree via sage:
 
 ```$./sage -i libspatialindex```
 
@@ -189,13 +189,25 @@ To use it properly, please see these [examples](https://rtree.readthedocs.io/en/
 
 To get access to `RealSet_rtree` class in Sage, please do as follows.
 
-1. Install Sage from source.
+1. Install sage from source.
 
 Since *cgal_swig_bindings* package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
 
 2. Install libspatialindex and rtree in sage.
 
-See [libspatialindex and rtree package](#libspatialindex-and-rtree-package).
+Pull the corresponding versions from sage git:
+
+```$git pull trac public/32170```
+
+Install libspatialindex and rtree via sage:
+
+```$./sage -i libspatialindex```
+
+```$./sage -i rtree```
+
+Recompile files in sage:
+
+```$./sage -b```
 
 Now, we are done.
 
