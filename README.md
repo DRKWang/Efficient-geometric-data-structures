@@ -22,10 +22,10 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 - [How to access to those work?](#how-to-access-to-those-work)
 
 #### **Installation & Usage**
-- [Installation of cgal_swig_bindings, cgal, swig]
-- [Installation and usage of libspatialindex and rtree]
-- [Usage of RealSet Class]
-- [Usage of RationalPolyhedralFan Class]
+- [cgal_swig_bindings, cgal, swig]
+- [libspatialindex and rtree]
+- [RealSet Class]
+- [RationalPolyhedralFan Class]
 
 # Projects
 
@@ -99,19 +99,41 @@ You may access them via SageMath software. You can check the tutorial of SageMat
 
 The following code has been tested on MAC OS. It might be successful on other platforms, but without guarantee.
 
-## Installation of cgal_swig_bindings, cgal and swig package
+## cgal_swig_bindings, cgal and swig package
 
-To get access to cgal in Sage, we do as follows.
+To get access to cgal in Sage, please do as follows.
 
-1. Install Sage.
+1. Install Sage from source.
 
-Since the `cgal_swig_bindings` package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
+Since *cgal_swig_bindings* package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
 
-2. Install CGAL
+2. Install CGAL.
 
-Run `$brew install cgal` in terminal.
-8. 
+Run the following script in terminal.
 
+```$brew install cgal```
+
+3. Install SWIG.
+
+Run the following script in terminal.
+
+```$brew install swig```
+
+4. Install cgal_swig_bindings.
+
+Enter into **SAGE_ROOT** in terminal.
+
+```$cd path/to/SAGE_ROOT```
+
+Pull the corresponding version of it, which includes the scripts for installing cgal_swig_bindings, from sage git.
+
+```git pull trac u/mkoeppe/cgal_swig_bindings```
+
+Install it via Sage.
+
+```./sage -i cgal_swig_bindings```
+
+After installation, to use it properly, please see these [examples](https://github.com/CGAL/cgal-swig-bindings/wiki/BindingsExamples).
 
 ## Installation and usage of libspatialindex and rtree package
 
