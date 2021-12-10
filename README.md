@@ -97,7 +97,7 @@ You may access them via SageMath software. You can check the tutorial of SageMat
 
 # Installation & Usage
 
-The following code has been tested on MAC OS. It might be successful on other platforms, but without guarantee.
+The following code has been installed successfully on MAC OS. It might not be installed successfully on other systems.
 
 ## cgal_swig_bindings, cgal and swig package
 
@@ -125,15 +125,27 @@ Enter into **SAGE_ROOT** in terminal.
 
 ```$cd path/to/SAGE_ROOT```
 
-Pull the corresponding version of it, which includes the scripts for installing cgal_swig_bindings, from sage git.
+Pull the corresponding versions from sage git, which includes the scripts for installing cgal_swig_bindings.
 
-```git pull trac u/mkoeppe/cgal_swig_bindings```
+```$git pull trac u/mkoeppe/cgal_swig_bindings```
 
 Install it via Sage.
 
-```./sage -i cgal_swig_bindings```
+```$./sage -i cgal_swig_bindings```
 
-After installation, to use it properly, please see these [examples](https://github.com/CGAL/cgal-swig-bindings/wiki/BindingsExamples).
+Now, we are done.
+
+To test whether it has been installed successfully, lauch sage in terminal.
+
+```$./sage```
+
+Then import cgal in sage.
+
+```>import CGAL```
+
+If it can be imported without any error, then it shows installation is successful.
+
+To use it properly, please see these [examples](https://github.com/CGAL/cgal-swig-bindings/wiki/BindingsExamples).
 
 ## Installation and usage of libspatialindex and rtree package
 
