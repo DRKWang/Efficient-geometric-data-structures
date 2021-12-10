@@ -121,7 +121,7 @@ Enter into **SAGE_ROOT** in terminal:
 
 ```$cd path/to/SAGE_ROOT```
 
-Pull the corresponding versions from sage git, which includes the scripts for installing cgal_swig_bindings.
+Pull the corresponding version from sage git, which includes the scripts for installing cgal_swig_bindings.
 
 ```$git pull trac u/mkoeppe/cgal_swig_bindings```
 
@@ -157,7 +157,7 @@ Enter into **SAGE_ROOT** in terminal:
 
 ```$cd path/to/SAGE_ROOT```
 
-Pull the corresponding versions from sage git, which includes the scripts for installing libspatialindex and rtree:
+Pull the corresponding version from sage git, which includes the scripts for installing libspatialindex and rtree:
 
 ```$git pull trac public/32000```
 
@@ -192,7 +192,7 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 2. Install libspatialindex and rtree in sage.
 
-Pull the corresponding versions from sage git:
+Pull the corresponding version from sage git:
 
 ```$git pull trac public/32170```
 
@@ -264,7 +264,7 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 2. Install libspatialindex and rtree in sage.
 
-Pull the corresponding versions from sage git:
+Pull the corresponding version from sage git:
 
 ```$git pull trac public/32170```
 
