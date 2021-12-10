@@ -109,19 +109,19 @@ Since *cgal_swig_bindings* package currently is waiting for review, it can only 
 
 2. Install CGAL.
 
-Run the following script in terminal.
+Run the following script in terminal:
 
 ```$brew install cgal```
 
 3. Install SWIG.
 
-Run the following script in terminal.
+Run the following script in terminal:
 
 ```$brew install swig```
 
 4. Install cgal_swig_bindings.
 
-Enter into **SAGE_ROOT** in terminal.
+Enter into **SAGE_ROOT** in terminal:
 
 ```$cd path/to/SAGE_ROOT```
 
@@ -129,17 +129,17 @@ Pull the corresponding versions from sage git, which includes the scripts for in
 
 ```$git pull trac u/mkoeppe/cgal_swig_bindings```
 
-Install it via sage.
+Install it via sage:
 
 ```$./sage -i cgal_swig_bindings```
 
 Now, we are done.
 
-To test whether it has been installed successfully, lauch sage in terminal.
+To test whether it has been installed successfully, lauch sage in terminal:
 
 ```$./sage```
 
-Then import cgal in sage.
+Then import cgal in sage:
 
 ```sage: import CGAL```
 
