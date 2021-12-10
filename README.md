@@ -167,9 +167,10 @@ Pull the corresponding versions from sage git, which includes the scripts for in
 
 Install libspatialindex and rtree via sage:
 
-```$./sage -i libspatialindex```
-
-```$./sage -i rtree```
+```
+$./sage -i libspatialindex
+$./sage -i rtree
+```
 
 Now, we are done.
 
@@ -201,9 +202,10 @@ Pull the corresponding versions from sage git:
 
 Install libspatialindex and rtree via sage:
 
-```$./sage -i libspatialindex```
-
-```$./sage -i rtree```
+```
+$./sage -i libspatialindex
+$./sage -i rtree
+```
 
 Recompile files in sage:
 
@@ -225,9 +227,10 @@ To use it, see the following examples.
 
 1. Define a RealSet_rtree class:
 
-```sage: from sage.sets.real_set import RealSet_rtree ```
-
-```sage: A = RealSet_rtree(0,1)```
+```
+sage: from sage.sets.real_set import RealSet_rtree
+sage: A = RealSet_rtree(0,1)
+```
 
 2. Check whether a point is included in a real set class or not.
 
