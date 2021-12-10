@@ -256,7 +256,7 @@ sage: print(type(A.intersection(B)), type(B.intersection(A)))
 <class 'sage.sets.real_set.RealSet_with_category'> <class 'sage.sets.real_set.RealSet_rtree_with_category'>
 ```
 
-Other examples can be found in [docstring](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=a2fa0baaf7168d67a75f290640ad86cda2d75ad1) of RealSet_rtree class.
+Other examples can be found in [docstring](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=a2fa0baaf7168d67a75f290640ad86cda2d75ad1) of `RealSet_rtree` class.
 
 ## RationalPolyhedralFan Class
 
@@ -297,7 +297,7 @@ If it can be imported without any error, then installation is successful.
 
 To use it, see the following examples.
 
-1. Define a RationalPolyhedralFan_rtree class:
+1. Define a `RationalPolyhedralFan_rtree` class:
 
 Explicitly define it with `RationalPolyhedralFan_rtree` class,
 ```
@@ -308,7 +308,7 @@ sage: v2.set_immutable()
 sage: f = RationalPolyhedralFan_rtree([(0,),(1,)], [v1,v2], None)
 ```
 
-Or, define it via a `allow_rtree` flag.
+Or, define it from `Fan`, `FaceFan`, `NormalFan` and `Fan2d` function, with setting `allow_rtree = True`.
 
 ```
 sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
@@ -328,7 +328,7 @@ sage: f.is_pointed()
 True
 ```
 
-3. Check whether a point is included in a real set class or not.
+3. Check whether a point is included in a `RationalPolyhedralFan_rtree` class or not.
 
 ```
 sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
@@ -346,7 +346,7 @@ True
 sage: f.support_contains((-1,0))
 False
 ```
-Other examples can be found in [docstring](https://git.sagemath.org/sage.git/tree/src/sage/geometry/fan.py?id=05ea99da812dd754edd97a717ae1c18eeeec1636) of RationalPolyhedralFan_rtree class.
+Other examples can be found in [docstring](https://git.sagemath.org/sage.git/tree/src/sage/geometry/fan.py?id=05ea99da812dd754edd97a717ae1c18eeeec1636) of `RationalPolyhedralFan_rtree` class.
 
 # Other useful references
 
