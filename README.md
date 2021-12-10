@@ -246,8 +246,16 @@ sage: (RealSet_rtree(0,1)+RealSet_rtree([3,4])).contains(3)
 True
 ```
 
+3. The type of the intersection of two `RealSet_rtree` instances is still maintained.
 
-
+```
+sage: from sage.sets.real_set import RealSet_rtree 
+sage: A = RealSet(0,1)
+sage: B = RealSet_rtree(0.5,3)
+sage: print(type(A.intersection(B)), type(B.intersection(A)))
+<class 'sage.sets.real_set.RealSet_with_category'> <class 'sage.sets.real_set.RealSet_rtree_with_category'>
+```
+Other examples can be found in docstring of RealSet_rtree class.
 
 ## Usage of RationalPolyhedralFan Class
 
