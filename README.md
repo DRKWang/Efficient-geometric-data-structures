@@ -22,10 +22,10 @@ The project focuses on applications of [**rtree**](https://en.wikipedia.org/wiki
 - [How to access to those work?](#how-to-access-to-those-work)
 
 #### **Installation & Usage**
-- [cgal_swig_bindings, cgal, swig]
-- [libspatialindex and rtree]
-- [RealSet Class]
-- [RationalPolyhedralFan Class]
+- [cgal_swig_bindings, cgal, swig](#cgal_swig_bindings-cgal-and-swig-package)
+- [libspatialindex and rtree](#cgal_swig_bindings-cgal-and-swig-package)
+- [RealSet_rtree Class](#realset_rtree-class)
+- [RationalPolyhedralFan_rtree Class](#rationalpolyhedralfan-class-1)
 
 # Projects
 
