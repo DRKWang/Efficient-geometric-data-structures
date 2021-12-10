@@ -101,7 +101,7 @@ The following code has been installed successfully on MAC OS. It might not be in
 
 ## cgal_swig_bindings, cgal and swig package
 
-To get access to cgal in Sage, please do as follows.
+To get access to cgal in sage, please do as follows.
 
 1. Install Sage from source.
 
@@ -135,7 +135,7 @@ Install it via sage:
 
 Now, we are done.
 
-To test whether it has been installed successfully, lauch sage in terminal:
+To test whether it has been installed successfully, launch sage in terminal:
 
 ```$./sage```
 
@@ -149,7 +149,7 @@ To use it properly, please see these [examples](https://github.com/CGAL/cgal-swi
 
 ## libspatialindex and rtree package
 
-To get access to rtree in Sage, please do as follows.
+To get access to rtree in sage, please do as follows.
 
 1. Install sage from source.
 
@@ -174,7 +174,7 @@ $./sage -i rtree
 
 Now, we are done.
 
-To test whether it has been installed successfully, lauch sage in terminal:
+To test whether it has been installed successfully, launch sage in terminal:
 
 ```$./sage```
 
@@ -188,7 +188,7 @@ To use it properly, please see these [examples](https://rtree.readthedocs.io/en/
 
 ## RealSet_rtree Class
 
-To get access to `RealSet_rtree` class in Sage, please do as follows.
+To get access to `RealSet_rtree` class in sage, please do as follows.
 
 1. Install sage from source.
 
@@ -213,7 +213,7 @@ Recompile files in sage:
 
 Now, we are done.
 
-To test whether it has been installed successfully, lauch sage in terminal:
+To test whether it has been installed successfully, launch sage in terminal:
 
 ```$./sage```
 
@@ -221,7 +221,7 @@ Then try to import it in sage:
 
 ```sage: from sage.sets.real_set import RealSet_rtree```
 
-If it can be imported without any error, then it shows installation is successful.
+If it can be imported without any error, then installation is successful.
 
 To use it, see the following examples.
 
@@ -255,9 +255,98 @@ sage: B = RealSet_rtree(0.5,3)
 sage: print(type(A.intersection(B)), type(B.intersection(A)))
 <class 'sage.sets.real_set.RealSet_with_category'> <class 'sage.sets.real_set.RealSet_rtree_with_category'>
 ```
-Other examples can be found in docstring of RealSet_rtree class.
 
-## Usage of RationalPolyhedralFan Class
+Other examples can be found in [docstring](https://git.sagemath.org/sage.git/tree/src/sage/sets/real_set.py?id=a2fa0baaf7168d67a75f290640ad86cda2d75ad1) of RealSet_rtree class.
+
+## RationalPolyhedralFan Class
+
+To get access to `RationalPolyhedralFan_rtree` class in sage, please do as follows.
+
+1. Install sage from source.
+
+Since *cgal_swig_bindings* package currently is waiting for review, it can only be accessed via develop version, instead of a release version, we have to install it from source. To install it, see [this page](https://doc.sagemath.org/html/en/installation/source.html#step-by-step-installation-procedure).
+
+2. Install libspatialindex and rtree in sage.
+
+Pull the corresponding versions from sage git:
+
+```$git pull trac public/32170```
+
+Install libspatialindex and rtree via sage:
+
+```
+$./sage -i libspatialindex
+$./sage -i rtree
+```
+
+Recompile files in sage:
+
+```$./sage -b```
+
+Now, we are done.
+
+To test whether it has been installed successfully, launch sage in terminal:
+
+```$./sage```
+
+Then try to import it in sage:
+
+```sage: from sage.geometry.fan import RationalPolyhedralFan_rtree```
+
+If it can be imported without any error, then installation is successful.
+
+To use it, see the following examples.
+
+1. Define a RationalPolyhedralFan_rtree class:
+
+Explicitly define it with `RationalPolyhedralFan_rtree` class,
+```
+sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
+sage: v1, v2= vector([0,1]), vector([1,0])
+sage: v1.set_immutable()
+sage: v2.set_immutable()
+sage: f = RationalPolyhedralFan_rtree([(0,),(1,)], [v1,v2], None)
+```
+
+Or, define it via a `allow_rtree` flag.
+
+```
+sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
+sage: cone1 = Cone([(0,-1), (1,0)])
+sage: cone2 = Cone([(1,0), (0,1)])
+sage: f = Fan([cone1, cone2], allow_rtree = True)
+```
+
+2. Check whether a fan is pointed or not.
+```
+sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
+sage: v1, v2= vector([0,1]), vector([1,0])
+sage: v1.set_immutable()
+sage: v2.set_immutable()
+sage: f = RationalPolyhedralFan_rtree([(0,),(1,)], [v1,v2], None)
+sage: f.is_pointed()
+True
+```
+
+3. Check whether a point is included in a real set class or not.
+
+```
+sage: from sage.geometry.fan import RationalPolyhedralFan_rtree
+sage: cone1 = Cone([(0,-1), (1,0)])
+sage: cone2 = Cone([(1,0), (0,1)])
+sage: f = Fan([cone1, cone2], allow_rtree = True)
+sage: f.support_contains(f.lattice()(1,0))
+True
+sage: f.support_contains(cone1)    # a cone is not a point of the lattice
+False
+sage: f.support_contains((1,0))
+True
+sage: f.support_contains(1,1)
+True
+sage: f.support_contains((-1,0))
+False
+```
+Other examples can be found in [docstring](https://git.sagemath.org/sage.git/tree/src/sage/geometry/fan.py?id=05ea99da812dd754edd97a717ae1c18eeeec1636) of RationalPolyhedralFan_rtree class.
 
 # Other useful references
 
