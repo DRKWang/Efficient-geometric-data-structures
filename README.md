@@ -177,7 +177,7 @@ To test whether it has been installed successfully, lauch sage in terminal:
 
 ```$./sage```
 
-Then try to import cgal in sage:
+Then try to import rtree in sage:
 
 ```sage: from rtree import index```
 
@@ -215,13 +215,34 @@ To test whether it has been installed successfully, lauch sage in terminal:
 
 ```$./sage```
 
-Then try to import cgal in sage:
+Then try to import it in sage:
 
 ```sage: from sage.sets.real_set import RealSet_rtree```
 
 If it can be imported without any error, then it shows installation is successful.
 
 To use it, see the following examples.
+
+1. Define a RealSet_rtree class:
+
+```sage: from sage.sets.real_set import RealSet_rtree ```
+
+```sage: A = RealSet_rtree(0,1)```
+
+2. Check whether a point is included in a real set class or not.
+
+```
+sage: from sage.sets.real_set import RealSet_rtree
+sage: RealSet_rtree(0,1).contains(0.5)              
+True
+sage: RealSet_rtree(0,1).contains(3)                                                                
+False
+sage: (RealSet_rtree(0,1)+RealSet_rtree(3,4)).contains(3)                                           
+False
+sage: (RealSet_rtree(0,1)+RealSet_rtree([3,4])).contains(3)                                         
+True
+```
+
 
 
 
